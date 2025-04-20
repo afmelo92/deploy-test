@@ -7,7 +7,7 @@
     "dev": "dotenv -e .env -- tsx --no-cache --watch src/index.ts",
     "build": "tsc",
     "start": "dotenv -e .env -- node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified yet. Please test the code asap\""
   },
   "keywords": [],
   "author": "Andre Melo",
