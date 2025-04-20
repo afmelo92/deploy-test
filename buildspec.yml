@@ -6,7 +6,7 @@ phases:
       nodejs: 20
     commands:
       # Install pnpm globally
-      - npm install -g pnpm@10.8.1
+      - npm install -g pnpm
       # Verify pnpm installation
       - pnpm --version
 
