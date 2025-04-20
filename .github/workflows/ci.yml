@@ -22,6 +22,15 @@ jobs:
       with:
         node-version: '23.x'
         cache: 'pnpm'
-    - run: pnpm install -P --frozen-lockfile
-    - run: pnpm build
-    - run: pnpm test
+
+    - name: Install pnpm
+      run: npm install -g pnpm
+
+    - name: Install dependencies
+      run: pnpm install -P --frozen-lockfile
+
+    - name: Build project
+      run: pnpm build
+
+    - name: Run tests
+      run: pnpm test
