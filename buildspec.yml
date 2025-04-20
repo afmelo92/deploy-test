@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      # Install pnpm globally
+      - npm install -g pnpm@10.8.1
+      # Verify pnpm installation
+      - pnpm --version
+
+  pre_build:
+    commands:
+      - echo "Running pre-build tasks..."
+
+      - echo "Removing prepare script from package.json..."
+      - npm pkg delete scritps.prepare
+
+      - echo "Installing dependencies..."
+      - pnpm install -P --frozen-lockfile
+
+  build:
+    commands:
+      - echo "Building the project..."
+      - pnpm build
+
+  post_build:
+    commands:
+      - echo "Running post-build tasks..."
+      # Add any post-build commands here if needed
