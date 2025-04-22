@@ -28,4 +28,8 @@ phases:
   post_build:
     commands:
       - echo "Running post-build tasks..."
+      - aws s3 sync ./dist s3://${BUILD_APP_BUCKET} --delete
+      - aws s3 cp ./package.json s3://${BUILD_APP_BUCKET}/package.json
+      - aws s3 cp ./pnpm-lock.yaml s3://${BUILD_APP_BUCKET}/pnpm-lock.yaml
+      - echo "Build completed and files uploaded to S3."
       # Add any post-build commands here if needed
