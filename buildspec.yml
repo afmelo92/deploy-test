@@ -35,6 +35,7 @@ phases:
   #     # Add any post-build commands here if needed
 
 artifacts:
+  name: build-artifact
   files:
     - dist/**/*
     - package.json
