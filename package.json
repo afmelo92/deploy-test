@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --fix",
+    "prettier": "prettier --write",
     "dev": "dotenv -e .env -- tsx --no-cache --watch src/index.ts",
     "build": "tsc",
     "start": "dotenv -e .env -- node dist/index.js",
@@ -12,11 +14,12 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+      "pnpm lint",
+      "pnpm prettier",
+      "pnpm test"
     ],
     "*.{json,md}": [
-      "prettier --write"
+      "pnpm prettier"
     ]
   },
   "keywords": [],

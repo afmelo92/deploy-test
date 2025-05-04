@@ -10,7 +10,7 @@ app.use(express.json());
 // Rotas
 app.get('/', (req: Request, res: Response) => {
   res.json({
-    message: `Welcome to the new deploy in ${process.env.NODE_ENV}`,
+    message: `Welcome to the new deploy ${process.env.NODE_ENV}.`,
   });
 });
 
