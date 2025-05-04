@@ -7,7 +7,8 @@
     "dev": "dotenv -e .env -- tsx --no-cache --watch src/index.ts",
     "build": "tsc",
     "start": "dotenv -e .env -- node dist/index.js",
-    "test": "echo \"No test specified yet. Please test the code asap\""
+    "test": "echo \"No test specified yet. Please test the code asap\"",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "Andre Melo",
@@ -26,6 +27,8 @@
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-prettier": "^5.2.6",
     "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
     "tsx": "^4.19.3",
     "typescript": "^5.8.3",

@@ -19,7 +19,7 @@ jobs:
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: '9' # Specify the pnpm version (e.g., 9, adjust if needed)
+          version: '10.8.1' # Specify the pnpm version (e.g., 9, adjust if needed)
 
       # Set up Node.js environment
       - name: Set up Node.js

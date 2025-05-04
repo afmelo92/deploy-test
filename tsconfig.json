@@ -13,11 +13,6 @@
     "allowJs": true, // Permite arquivos JS, se necessário
     "sourceMap": true // Gera mapas de origem para depuração
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
