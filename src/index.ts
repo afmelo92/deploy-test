@@ -14,13 +14,6 @@ app.get('/', (req: Request, res: Response) => {
   });
 });
 
-app.get('/users', (req: Request, res: Response) => {
-  res.json({
-    message: 'ok',
-    data: [],
-  });
-});
-
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
