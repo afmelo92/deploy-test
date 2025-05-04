@@ -10,6 +10,15 @@
     "test": "echo \"No test specified yet. Please test the code asap\"",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
   "keywords": [],
   "author": "Andre Melo",
   "license": "ISC",
